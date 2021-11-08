@@ -30,8 +30,14 @@ const getTasks = async () => {
   return await tryCatchFetch(url, getInit());
 };
 
+const getTaskById = async (taskId) => {
+  let url = `${BASE_URL}api/tasks/${taskId}/`;
+  return await tryCatchFetch(url, getInit());
+};
+
 const myExports = {
   getTasks,
+  getTaskById,
 };
 
 export default myExports;
